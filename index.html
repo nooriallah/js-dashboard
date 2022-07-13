@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMS</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <!-- start header -->
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-sm navbar-light bg-light p-0">
+            <div class="container-fluid ">
+
+                <a class="navbar-brand mt-1 font-weight-bold" href="#">Dashboard</a>
+
+                <span class="h4 text-muted mt-2" id="sidebarToggler" style="cursor: pointer;">
+                    <i class="fa fa-arrow-right"></i>
+                </span>
+
+                <button class="navbar-toggler" id="btnNavBarToggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="#menu1" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse mx-2 " id="menu1">
+                    <div class="navbar-nav  col">
+                        <a class="nav-link " href="#">
+                            <i class="fa fa-dashboard text-success"></i>Settings
+                        </a>
+                        <a class="nav-link" href="#">
+                            <i class="fa fa-user-group text-primary"></i>Users
+                        </a>
+                        <a class="nav-link" href="#">
+                            <i class="fa fa-layer-group"></i>Performance</a>
+                    </div>
+                </div>
+                <div class="navbar-nav align-items-center d-none d-md-flex ">
+                    <a class="nav-link" href="#">L1<span class="badge badge-info badge-pill">10</span></a>
+                    <a class="nav-link" href="#">L2<span class="badge badge-pill badge-danger">5</span></a>
+                    <a class="nav-link" href="#">L3<span class="badge badge-pill badge-warning">3</span></a>
+                    <a class="nav-link" href="#">
+                        <img src="1.jpg" width="50" height="50" alt="" style="border-radius: 50%;">
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- ------------------- END HEADER------------------------- -->
+
+    <!-- ===========================main content ================================ -->
+    <div class="container-fluid">
+        <div class="row">
+
+            <!---------------------- left sidebar---------------------------  -->
+            <div id="sidebar" class="showside bg-dark col-10 col-md-2 position-fixed ">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a href="#" id="btnSetting" class="nav-link pl-0 my-1">
+                            Setting
+                            <span class="float-right font-weight-bold"> <i class="fa fa-arrow-right ar1"></i>
+                            </span>
+                        </a>
+                        <div class="collapse clp1 bg-secondary rounded">
+                            <ul class="nav flex-column">
+                                <li class="nav-item"><a href="#" class="nav-link">User accounts</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link">Options</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link">See history</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link">Old products</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link">New Products</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" id="btnProduct" class="nav-link pl-0 my-1">
+                            Product
+                            <span class="float-right font-weight-bold"> <i class="fa fa-arrow-right ar2"></i> </span>
+                        </a>
+                        <div class="collapse clp2 bg-secondary rounded">
+                            <ul class="nav flex-column">
+                                <li class="nav-item"><a href="#" class="nav-link">Elictical products</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link">Technical products</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link pl-0 my-1">Sales</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link pl-0 my-1">Features</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link pl-0 my-1">Services</a></li>
+                </ul>
+            </div>
+            <!-- -------------------------end sidebar ------------------------  -->
+
+
+
+            <!-- main content  -->
+            <div class="main-content col-md-10 py-4 ml-auto">
+
+                <!-- cards  -->
+                <div class="card-deck">
+
+                    <!-- our cards  -->
+                    <div class="card text-white bg-warning border-0 shadow">
+                        <div class="card-body p-2">
+                            <i class="fa fa-chart-area h4" aria-hidden="true"></i>
+                            <h5 class="card-title float-right">5000</h5>
+                            <p class="card-text">All of user visits in this day</p>
+                            <canvas id="chart1" width="100%" height="70"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- our cards  -->
+                    <div class="card text-white bg-danger border-0 shadow">
+                        <div class="card-body p-2">
+                            <i class="fa fa-chart-line h4" aria-hidden="true"></i>
+                            <h5 class="card-title float-right">5590</h5>
+                            <p class="card-text">
+                                Lorem ipsum dolor sit amet </p>
+                            <canvas id="chart2" width="100%" height="70"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- our cards  -->
+                    <div class="card text-white bg-success border-0 shadow">
+                        <div class="card-body p-2">
+                            <i class="fa fa-chart-column h4" aria-hidden="true"></i>
+                            <h5 class="card-title float-right">6100</h5>
+                            <p class="card-text">
+                                Lorem ipsum dolor sit amet some text </p>
+                            <canvas id="chart3" width="100%" height="70"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- our cards  -->
+                    <div class="card col-lg-4 text-white bg-info border-0 shadow">
+                        <div class="card-body p-2">
+                            <i class="fa fa-chart-gantt h4" aria-hidden="true"></i>
+                            <h5 class="card-title float-right">32000</h5>
+                            <p class="card-text">
+                                Lorem ipsum dolor sit amet </p>
+                            <canvas id="chart4" width="100%" height="70"></canvas>
+                        </div>
+                    </div>
+
+
+                </div>
+                <!-- end cards  -->
+
+                <!-- site visit bars  -->
+                <div class="card my-3 bg-white ">
+
+                    <div class="card-body py-2 px-1">
+
+                        <div class="d-flex justify-content-between align-items-center">
+
+                            <h4 class="card-title text-muted font-weight-bold ">Site Visit</h4>
+
+                            <div class="button-group btn-group-toggle" data-toggle="buttons">
+                                <label class="btn btn-sm btn-outline-secondary">
+                                    Day<input type="radio" name="" id="" checked>
+                                </label>
+                                <label class="btn  btn-outline-secondary btn-sm">
+                                    Month<input type="radio" name="" id="">
+                                </label>
+                                <label class="btn btn-sm btn-outline-secondary">
+                                    Year<input type="radio" name="" id="">
+                                </label>
+                            </div>
+
+                            <button type="submit" id="btnPrint" class="btn btn-sm btn-secondary" data-toggle="tooltip"
+                                data-placement="top" title="Print">Print</button>
+
+                        </div>
+
+                        <!-- canvase chart  -->
+                        <canvas id="chVisit" width="100%" height="40"></canvas>
+
+                    </div>
+                    <div class="card-footer">
+                        <div class="row text-center">
+
+                            <!-- Parcantages  -->
+                            <div class="col-12 col-sm-6 col-md-4 col-lg">
+                                <strong class="text-muted">Total Visit</strong>
+                                <p class="my-2">53000 User (45%)</p>
+                                <div class="progress" style="height: 8px;">
+                                    <div class="progress-bar bg-info" style="width: 45%;"></div>
+                                </div>
+                            </div>
+                            <!-- Parcantages  -->
+                            <div class="col-12 col-sm-6 col-md-4 col-lg">
+                                <strong class="text-muted">page Visit</strong>
+                                <p class="my-2">5000 User (40%)</p>
+                                <div class="progress" style="height: 8px;">
+                                    <div class="progress-bar bg-warning" style="width: 40%;"></div>
+                                </div>
+                            </div>
+                            <!-- Parcantages  -->
+                            <div class="col-12 col-sm-6 col-md-4 col-lg">
+                                <strong class="text-muted">Visit of </strong>
+                                <p class="my-2">60,000 User (75%)</p>
+                                <div class="progress" style="height: 8px;">
+                                    <div class="progress-bar bg-success w-75" s></div>
+                                </div>
+                            </div>
+                            <!-- Parcantages  -->
+                            <div class="col-12 col-sm-6 col-md-4 col-lg">
+                                <strong class="text-muted">Unique Visit</strong>
+                                <p class="my-2">300 User (15%)</p>
+                                <div class="progress" style="height: 8px;">
+                                    <div class="progress-bar bg-danger" style="width: 15%;"></div>
+                                </div>
+                            </div>
+                            <!-- Parcantages  -->
+                            <div class="col-12 col-sm-6 col-md-4 col-lg ">
+                                <strong class="text-muted">Some Visit</strong>
+                                <p class="my-2">50000 User (60%)</p>
+                                <div class="progress" style="height: 8px;">
+                                    <div class="progress-bar bg-secondary" style="width: 50%;"></div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+                <!-- visit end -->
+
+
+                <!-- Sale report Table-->
+                <div class="card bg-white ">
+
+                    <div class="card-body p-2">
+                        <h4 class="card-title text-muted">Sale report</h4>
+
+                        <div class="table-responsive">
+                            <table class="table table-bordered text-left">
+                                <thead class="thead-light ">
+                                    <tr>
+                                        <th>Product Name</th>
+                                        <th>Email</th>
+                                        <th>Price ($)</th>
+                                        <th>Stauts</th>
+                                        <th>Time</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Computer</td>
+                                        <td>E.mainl12@gmail.com</td>
+                                        <td>200</td>
+                                        <td><span class="t-btn btn btn-success d-block clearfix">Complated</span>
+                                        </td>
+                                        <td>10 minute ago</td>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Mobile</td>
+                                        <td>E.mainl12@gmail.com</td>
+                                        <td>100</td>
+                                        <td><span class="t-btn btn btn-danger d-block">Unomplated</span></td>
+                                        <td>8 Hours ago</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Printer</td>
+                                        <td>E.mainl12@gmail.com</td>
+                                        <td>50</td>
+                                        <td><span class="t-btn btn btn-success d-block">Complated</span></td>
+                                        <td>20 Minute ago</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Projector</td>
+                                        <td>E.mainl12@gmail.com</td>
+                                        <td>150</td>
+                                        <td><span class="t-btn btn btn-success d-block">Complated</span></td>
+                                        <td>11 Minute ago</td>
+                                    </tr>
+                                    <tr>
+                                        <td>LED</td>
+                                        <td>E.mainl12@gmail.com</td>
+                                        <td>80</td>
+                                        <td><span class="t-btn btn btn-danger d-block">Uncomplated</span></td>
+                                        <td>5 hours ago</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Desktop</td>
+                                        <td>E.mainl12@gmail.com</td>
+                                        <td>510</td>
+                                        <td><span class="t-btn btn btn-success d-block">Complated</span></td>
+                                        <td>2 day ago</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Mikrotik</td>
+                                        <td>E.some423@gmail.com</td>
+                                        <td>90</td>
+                                        <td><span class="t-btn btn btn-warning d-block">In progress</span></td>
+                                        <td>Now</td>
+                                    </tr>
+                                    <tr>
+                                        <td>AP</td>
+                                        <td>E.every534@gmail.com</td>
+                                        <td>40</td>
+                                        <td><span class="t-btn btn btn-success d-block">Complated</span></td>
+                                        <td>4 Hours ago</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- end of table  -->
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <!-- --------------------------------End of content ------------------------------- -->
+
+
+
+
+
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- <script src="js/popover.js"></script>
+    <script src="js/tooltip.js"></script> -->
+    <script src="js/util.js"></script>
+    <script src="js/chart.min.js"></script>
+    <script src="js/custmescript.js"></script>
+
+</body>
+
+</html>
